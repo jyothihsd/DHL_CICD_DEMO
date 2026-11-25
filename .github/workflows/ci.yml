@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Hello
+        shell: powershell
+        run: |
+          echo "Hello from my self-hosted runner"
+          hostname
+          whoami
